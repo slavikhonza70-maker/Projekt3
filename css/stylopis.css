@@ -1,0 +1,373 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 120PX;
+    background: linear-gradient(
+    145deg, 
+    #e5965b 0%,    /* Tmavší hnědá (stín) */
+    #d27422 40%,   /* Hlavní sytá barva srsti */
+    #de9d51 80%,   /* Světlejší odlesk na hřbetě */
+    #965a2c 100%   /* Uzavření do tmavší tóniny */
+    );
+    
+}
+
+/* HEADER */
+header {
+    background-color: rgb(218, 165, 32);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    
+
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    padding-bottom: px;
+
+    border-radius: 0 0 10px 10px;
+    outline: solid 3px rgb(0, 0, 0);
+}
+
+header h1 {
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    margin-left: 350px;
+    
+}
+
+/* MENU (SIDEBAR) */
+nav {
+    position: fixed;
+    top: 180px; /* pod headerem */
+    left: 0;
+    width: 180px;
+    height: 55%;
+
+    background-color: rgb(218, 165, 32);
+    padding-top: 2px;
+    border-radius: 15px;
+    outline: 3px solid rgb(0, 0, 0);
+    margin-left: 5px;
+    margin-top: 55px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column; /* POD SEBOU */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+nav ul li {
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px;
+
+    border: 1px black solid;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+
+    text-decoration: none;
+    font-size: 18px;
+
+    transition: 0.3s;
+    
+}
+
+nav ul li a:hover {
+    background-color: rgb(173, 128, 17);
+    color: rgb(255, 255, 255);
+    border: 1px rgb(255, 255, 255) solid;
+}
+
+/* OBSAH */
+main {
+    margin-left: 250px; /* místo pro menu */
+    margin-top: 120px; /* místo pro header */
+    padding: 20px;
+}
+
+footer  {
+    background-color: rgb(218, 165, 32);
+    border-top: rgb(218, 165, 32) solid 5px;
+
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    height: 100px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 100px ;
+    outline: 3px solid rgb(0, 0, 0)
+}
+
+footer p {
+   font-size: 20px;
+
+}
+
+footer p a {
+   color: rgb(0, 0, 0);
+
+}
+
+footer h3 {
+   margin-left: 25px;
+  margin-top: 25px;
+
+
+}
+
+.main {
+   
+    margin-top: 50px ;
+    padding: 3px;
+    margin-left: 200px;
+    margin-right: 50px;
+    width: 1600px;
+    
+    
+}
+
+.main article {
+
+ background-color: rgb(218, 165, 32);
+ border: 2px rgb(0, 0, 0) solid;
+ padding: 10px;
+ border-radius: 10px;
+ 
+}
+
+.main article p {
+    text-align: justify;
+    font-size: 25px;
+
+    
+}
+
+.prvni
+{
+
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+p {
+    margin: 0px;
+}
+
+.uvod {
+    display: grid;
+    /* Tady nastavíš přesná procenta pro sloupce */
+    grid-template-columns: 65% 35%; 
+    
+    /* Mezera mezi textem a fotkou */
+    gap: 20px;       
+    
+    /* Zarovnání textu a fotky nahoru */
+    align-items: start; 
+}
+.pes {
+    width: 100%;     
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 50px;
+    
+}
+.margin {
+    margin-top: 100px;
+}
+.margin2 {
+    margin-top: 80px;
+}
+
+header img {
+    /* název animace | délka | plynulost */
+    animation: logo 1.2s ease-in-out;
+}
+@keyframes logo {
+    0% {
+        transform: translateY(20px); /* Začíná trochu níž */
+        opacity: 0;                  /* Je průhledné */
+    }
+    100% {
+        transform: translateY(0);    /* Skončí na svém místě */
+        opacity: 1;                  /* Je plně viditelné */
+    }
+
+}
+
+/* Nastavení pro fotku s třídou pes */
+.pes {
+    transition: transform 0.4s ease; 
+    cursor: pointer;
+}
+
+/* Zvětšení o 1 % při najetí myší */
+.pes:hover {
+    transform: scale(1.01); 
+}
+.pes:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
+}
+
+/* Odsazení obsahu od levého menu (přizpůsob podle šířky tvého menu) */
+.obsah-galerie {
+    margin-left: 220px; 
+    padding: 40px;
+    margin-top: 10px;
+   
+}
+
+.galerie-nadpis {
+    text-align: center;
+    margin-top: 0;          /* Vynulujeme horní okraj */
+    margin-bottom: 20px;    /* Zmenšíme mezeru pod nadpisem */
+    padding: 10px 20px;     /* Horní/dolní padding je menší (10px) */
+    
+    /* Pokud chceš i ten žlutý boxík užší než zbytek fotek: */
+    width: 250px;     /* Box se roztáhne jen podle textu */
+    height: 150px;
+    margin-left: auto;      /* Vycentrování úzkého boxu */
+    margin-right: auto;
+    
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid black;
+    border-radius: 15px;
+    
+    
+}
+/* Zvětšení hlavního nadpisu Galerie mých psů */
+.galerie-nadpis h2 {
+    font-size: 35px;       /* Tady si nastav velikost podle sebe */
+    margin-bottom: 5px;    /* Mezera mezi velkým a malým textem */
+    text-transform: uppercase; /* Volitelné: udělá to všechno velkými písmeny */
+    letter-spacing: 2px;   /* Trošku roztáhne písmenka od sebe, vypadá to profi */
+    padding-top: 20px;
+    
+    
+}
+
+
+
+.galerie-nadpis h2 {
+    margin: 0;              /* Odstraní defaultní mezeru u H2 */
+}
+
+.galerie-grid {
+    display: grid;
+    /* Tímto příkazem řekneš: udělej 3 sloupce, každý stejně široký (1fr) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px; /* Mezera mezi fotkami */
+}
+
+.foto-karta img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Důležité: fotky se nedeformují, jen oříznou do čtverce/obdélníku */
+    border: 3px solid black;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Ten tvůj oblíbený efekt zvětšení */
+.foto-karta img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+}
+.galerie-video {
+    width: 100%;
+    height: 400px; /* Stejná výška jako u tvých fotek */
+    object-fit: cover; /* Aby video vyplnilo prostor a nedeformovalo se */
+    border: 3px solid black;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.galerie-video:hover {
+    transform: scale(1.03); /* I video se může trošku zvětšit */
+}
+/* Tato třída upraví jen tu jednu fotku s názvem posun-dolu */
+.dolu {
+    /* 50% je vodorovně (necháme střed) */
+    /* 75% je svisle (posune fotku nahoru, abys viděl víc její spodní části) */
+    object-position: 50% 75% !important;
+}
+/* Tato třída upraví jen tu jednu fotku s názvem posun-dolu */
+.doluu {
+    /* 50% je vodorovně (necháme střed) */
+    /* 75% je svisle (posune fotku nahoru, abys viděl víc její spodní části) */
+    object-position: 50% 90% !important;
+}
+
+.pesan {
+    transition: transform 0.4s ease; 
+    cursor: pointer;
+}
+
+/* Zvětšení o 1 % při najetí myší */
+.pesan:hover {
+    transform: scale(1.01); 
+}
+.pesan:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
+}
+.pesan {
+    width: 100%;     
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 150px;
+    }
+
+    .pejsek {
+    transition: transform 0.4s ease; 
+    cursor: pointer;
+}
+
+/* Zvětšení o 1 % při najetí myší */
+.pejsek:hover {
+    transform: scale(1.01); 
+}
+.pejsek:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.4);
+}
+.pejsek {
+    width: 100%;     
+    height: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 80px;
+    }
+    /* Základní nastavení pro PC (3 sloupce) */
+.galerie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
+
